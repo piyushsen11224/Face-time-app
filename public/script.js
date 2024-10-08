@@ -1,5 +1,5 @@
 // to allow user's video to come on room id that we created we create a script like this one and import it into room.ejs
-const socket = io("/");
+const socket = io("ws://instaconnect.onrender.com");
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 myVideo.muted = true;
