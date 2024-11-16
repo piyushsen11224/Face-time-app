@@ -71,9 +71,9 @@ function connectToNewUser(userId, stream) {
   const video = document.createElement("video");
   call.answer(stream);
   console.log("Answering call with stream:", stream);
-  addVideoStream(video, stream);
+  //addVideoStream(video, stream);
   console.log(userVideoStream);
-  call.on("stream", (userVideoStream) => {
+  call.on(stream, (userVideoStream) => {
     console.log("Received stream from user:", userId, userVideoStream);
     addVideoStream(video, userVideoStream); // This should be triggered
   });
